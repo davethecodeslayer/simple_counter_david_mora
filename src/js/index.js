@@ -9,4 +9,10 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+let secondCounter = 0 
+setInterval(function() {
+    secondCounter = secondCounter + 1
+    ReactDOM.render(<Home seconds={secondCounter}/>, document.querySelector("#app"));
+    console.log('a second has past')
+}, 1000)
+
